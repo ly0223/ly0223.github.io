@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="我的第一篇文章, 小洋的学习日记">
+    <meta name="keywords" content="java基础, 小洋的学习日记">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>我的第一篇文章 | 小洋的学习日记</title>
+    <title>java基础 | 小洋的学习日记</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">我的第一篇文章</h1>
+                    <h1 class="description center-align post-title">java基础</h1>
                 </div>
             </div>
         </div>
@@ -477,7 +477,37 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                
+                <ol>
+<li><p>ArrayList和LinkedList有什么区别？<br>可以从它们的底层数据结构、效率、开销进行阐述哈</p>
+<p> ArrayList是数组的数据结构，LinkedList是链表的数据结构。<br> 随机访问的时候，ArrayList的效率比较高，因为LinkedList要移动指针，而ArrayList是基于索引(index)的数据结构，可以直接映射到。<br> 插入、删除数据时，LinkedList的效率比较高，因为ArrayList要移动数据。<br> LinkedList比ArrayList开销更大，因为LinkedList的节点除了存储数据，还需要存储引用。</p>
+</li>
+<li><p>final, finally, finalize的区别<br> final用于声明属性,方法和类, 分别表示属性不可变, 方法不可覆盖, 类不可继承.<br> finally是异常处理语句结构的一部分，表示总是执行.<br> finalize是Object类的一个方法，在垃圾收集器执行的时候会调用被回收对象的此方法，可以覆盖此方法提供垃圾收集时的其他资源回收，例如关闭文件等. JVM不保证此方法总被调用.</p>
+</li>
+<li><p>重写和重载的区别<br> 作用范围：重写的作用范围是父类和子类之间；重载是发生在一个类里面<br> 参数列表：重载必须不同；重写不能修改<br> 返回类型：重载可修改；重写方法返回相同类型或子类<br> 抛出异常：重载可修改；重写可减少或删除，一定不能抛出新的或者更广的异常<br> 访问权限：重载可修改；重写一定不能做更严格的限制</p>
+</li>
+<li><p>Java 8的接口新增了哪些特性？<br> lambada表达式<br> 函数式接口<br> 方法引用<br> 默认方法<br> Stream API<br> Optional<br> Date Time API（如LocalDate）<br> 重复注解<br> Base64<br> JVM的新特性（如元空间Metaspace代替持久代）</p>
+</li>
+<li><p>两个对象的hashCode()相同，则 equals()是否也一定为 true？<br> 两个对象equals相等，则它们的hashcode必须相等，如果两个对象的hashCode()相同，则equals()不一定为true。</p>
+<p> hashCode 的常规协定：</p>
+<p> 在 Java 应用程序执行期间，在对同一对象多次调用 hashCode 方法时，必须一致地返回相同的整数，前提是将对象进行 equals 比较时所用的信息没有被修改。从某一应用程序的一次执行到同一应用程序的另一次执行，该整数无需保持一致。</p>
+<p> 两个对象的equals()相等，那么对这两个对象中的每个对象调用 hashCode 方法都必须生成相同的整数结果。</p>
+<p> 两个对象的equals()不相等，那么对这两个对象中的任一对象上调用 hashCode 方法不要求一定生成不同的整数结果。但是，为不相等的对象生成不同整数结果可以提高哈希表的性能。</p>
+</li>
+<li><p>抽象类和接口有什么区别<br> 抽象类要被子类继承，接口要被子类实现。<br> 抽象类可以有构造方法，接口中不能有构造方法。<br> 抽象类中可以有普通成员变量，接口中没有普通成员变量，它的变量只能是公共的静态的常量<br> 一个类可以实现多个接口，但是只能继承一个父类，这个父类可以是抽象类。<br> 接口只能做方法声明，抽象类中可以作方法声明，也可以做方法实现。<br> 抽象级别（从高到低）：接口&gt;抽象类&gt;实现类。<br> 抽象类主要是用来抽象类别，接口主要是用来抽象方法功能。<br> 抽象类的关键字是abstract，接口的关键字是interface</p>
+</li>
+<li><p>BIO、NIO、AIO 有什么区别？<br> BIO是同步并阻塞的，NIO是同步非阻塞，AIO是异步非阻塞。</p>
+<p> BIO：线程发起 IO 请求，不管内核是否准备好 IO 操作，从发起请求起，线程一直阻塞，直到操作完成。<br> NIO：线程发起 IO 请求，立即返回；内核在做好 IO 操作的准备之后，通过调用注册的回调函数通知线程做 IO 操作，线程开始阻塞，直到操作完成。<br> AIO：线程发起 IO 请求，立即返回；内存做好 IO 操作的准备之后，做 IO 操作，直到操作完成或者失败，通过调用注册的回调函数通知线程做 IO 操作完成或者失败。<br> BIO 是一个连接一个线程。,NIO 是一个请求一个线程。,AIO 是一个有效请求一个线程。</p>
+<p> BIO：同步并阻塞，服务器实现模式为一个连接一个线程，即客户端有连接请求时服务器端就需要启动一个线程进行处理，如果这个连接不做任何事情会造成不必要的线程开销，当然可以通过线程池机制改善。<br> NIO：同步非阻塞，服务器实现模式为一个请求一个线程，即客户端发送的连接请求都会注册到多路复用器上，多路复用器轮询到连接有I&#x2F;O请求时才启动一个线程进行处理。<br> AIO：异步非阻塞，服务器实现模式为一个有效请求一个线程，客户端的 IO 请求都是由 OS 先完成了再通知服务器应用去启动线程进行处理。</p>
+</li>
+<li><p>String，Stringbuffer，StringBuilder的区别<br> String：</p>
+<p> String类是一个不可变的类，一旦创建就不可以修改。<br> String是final类，不能被继承<br> String实现了equals()方法和hashCode()方法<br> StringBuffer：</p>
+<p> 继承自AbstractStringBuilder，是可变类。<br> StringBuffer是线程安全的<br> 可以通过append方法动态构造数据。<br> StringBuilder：</p>
+<p> 继承自AbstractStringBuilder，是可变类。<br> StringBuilder是非线性安全的。<br> 执行效率比StringBuffer高。</p>
+</li>
+<li><p>静态代理和动态代理的区别<br> 静态代理中代理类在编译期就已经确定，而动态代理则是JVM运行时动态生成，静态代理的效 率相对动态代理来说相对高一些，但是静态代理代码冗余大，一单需要修改接口，代理类和委 托类都需要修改。</p>
+</li>
+</ol>
+
                 
             </div>
             <hr/>
@@ -503,7 +533,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://ly0223.github.io/2022/07/07/wo-de-di-yi-pian-wen-zhang/">https://ly0223.github.io/2022/07/07/wo-de-di-yi-pian-wen-zhang/</a>
+                    <a href="https://ly0223.github.io/2022/07/07/java-ji-chu-0/">https://ly0223.github.io/2022/07/07/java-ji-chu-0/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -713,13 +743,13 @@
                 <i class="far fa-dot-circle"></i>&nbsp;本篇
             </div>
             <div class="card">
-                <a href="/2022/07/07/wo-de-di-yi-pian-wen-zhang/">
+                <a href="/2022/07/07/java-ji-chu-0/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="我的第一篇文章">
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="java基础">
                         
-                        <span class="card-title">我的第一篇文章</span>
+                        <span class="card-title">java基础</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -748,16 +778,16 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+                本篇&nbsp;<i class="far fa-dot-circle"></i>
             </div>
             <div class="card">
-                <a href="/2019/07/19/404/">
+                <a href="/2022/07/07/java-ji-chu-0/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="404">
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="java基础">
                         
-                        <span class="card-title">404</span>
+                        <span class="card-title">java基础</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -768,7 +798,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-07-19
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-07-07
                             </span>
                         <span class="publish-author">
                             
@@ -778,6 +808,7 @@
                         </span>
                     </div>
                 </div>
+
                 
             </div>
         </div>
@@ -977,7 +1008,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">0</span>&nbsp;字
+                class="white-color">1.5k</span>&nbsp;字
             
             
             
