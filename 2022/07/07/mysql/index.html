@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="java基础, 小洋的学习日记">
+    <meta name="keywords" content="mysql, 小洋的学习日记">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>java基础 | 小洋的学习日记</title>
+    <title>mysql | 小洋的学习日记</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">java基础</h1>
+                    <h1 class="description center-align post-title">mysql</h1>
                 </div>
             </div>
         </div>
@@ -450,7 +450,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-07-07
+                    2022-07-08
                 </div>
                 
 
@@ -478,39 +478,13 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <ol>
-<li><p>ArrayList和LinkedList有什么区别？<br>可以从它们的底层数据结构、效率、开销进行阐述哈</p>
-<p> ArrayList是数组的数据结构，LinkedList是链表的数据结构。<br> 随机访问的时候，ArrayList的效率比较高，因为LinkedList要移动指针，而ArrayList是基于索引(index)的数据结构，可以直接映射到。<br> 插入、删除数据时，LinkedList的效率比较高，因为ArrayList要移动数据。<br> LinkedList比ArrayList开销更大，因为LinkedList的节点除了存储数据，还需要存储引用。</p>
-</li>
-<li><p>final, finally, finalize的区别<br> final用于声明属性,方法和类, 分别表示属性不可变, 方法不可覆盖, 类不可继承.<br> finally是异常处理语句结构的一部分，表示总是执行.<br> finalize是Object类的一个方法，在垃圾收集器执行的时候会调用被回收对象的此方法，可以覆盖此方法提供垃圾收集时的其他资源回收，例如关闭文件等. JVM不保证此方法总被调用.</p>
-</li>
-<li><p>重写和重载的区别<br> 作用范围：重写的作用范围是父类和子类之间；重载是发生在一个类里面<br> 参数列表：重载必须不同；重写不能修改<br> 返回类型：重载可修改；重写方法返回相同类型或子类<br> 抛出异常：重载可修改；重写可减少或删除，一定不能抛出新的或者更广的异常<br> 访问权限：重载可修改；重写一定不能做更严格的限制</p>
-</li>
-<li><p>Java 8的接口新增了哪些特性？<br> lambada表达式<br> 函数式接口<br> 方法引用<br> 默认方法<br> Stream API<br> Optional<br> Date Time API（如LocalDate）<br> 重复注解<br> Base64<br> JVM的新特性（如元空间Metaspace代替持久代）</p>
-</li>
-<li><p>两个对象的hashCode()相同，则 equals()是否也一定为 true？<br> 两个对象equals相等，则它们的hashcode必须相等，如果两个对象的hashCode()相同，则equals()不一定为true。</p>
-<p> hashCode 的常规协定：</p>
-<p> 在 Java 应用程序执行期间，在对同一对象多次调用 hashCode 方法时，必须一致地返回相同的整数，前提是将对象进行 equals 比较时所用的信息没有被修改。从某一应用程序的一次执行到同一应用程序的另一次执行，该整数无需保持一致。</p>
-<p> 两个对象的equals()相等，那么对这两个对象中的每个对象调用 hashCode 方法都必须生成相同的整数结果。</p>
-<p> 两个对象的equals()不相等，那么对这两个对象中的任一对象上调用 hashCode 方法不要求一定生成不同的整数结果。但是，为不相等的对象生成不同整数结果可以提高哈希表的性能。</p>
-</li>
-<li><p>抽象类和接口有什么区别<br> 抽象类要被子类继承，接口要被子类实现。<br> 抽象类可以有构造方法，接口中不能有构造方法。<br> 抽象类中可以有普通成员变量，接口中没有普通成员变量，它的变量只能是公共的静态的常量<br> 一个类可以实现多个接口，但是只能继承一个父类，这个父类可以是抽象类。<br> 接口只能做方法声明，抽象类中可以作方法声明，也可以做方法实现。<br> 抽象级别（从高到低）：接口&gt;抽象类&gt;实现类。<br> 抽象类主要是用来抽象类别，接口主要是用来抽象方法功能。<br> 抽象类的关键字是abstract，接口的关键字是interface</p>
-</li>
-<li><p>BIO、NIO、AIO 有什么区别？<br> BIO是同步并阻塞的，NIO是同步非阻塞，AIO是异步非阻塞。</p>
-<p> BIO：线程发起 IO 请求，不管内核是否准备好 IO 操作，从发起请求起，线程一直阻塞，直到操作完成。<br> NIO：线程发起 IO 请求，立即返回；内核在做好 IO 操作的准备之后，通过调用注册的回调函数通知线程做 IO 操作，线程开始阻塞，直到操作完成。<br> AIO：线程发起 IO 请求，立即返回；内存做好 IO 操作的准备之后，做 IO 操作，直到操作完成或者失败，通过调用注册的回调函数通知线程做 IO 操作完成或者失败。<br> BIO 是一个连接一个线程。,NIO 是一个请求一个线程。,AIO 是一个有效请求一个线程。</p>
-<p> BIO：同步并阻塞，服务器实现模式为一个连接一个线程，即客户端有连接请求时服务器端就需要启动一个线程进行处理，如果这个连接不做任何事情会造成不必要的线程开销，当然可以通过线程池机制改善。<br> NIO：同步非阻塞，服务器实现模式为一个请求一个线程，即客户端发送的连接请求都会注册到多路复用器上，多路复用器轮询到连接有I&#x2F;O请求时才启动一个线程进行处理。<br> AIO：异步非阻塞，服务器实现模式为一个有效请求一个线程，客户端的 IO 请求都是由 OS 先完成了再通知服务器应用去启动线程进行处理。</p>
-</li>
-<li><p>String，Stringbuffer，StringBuilder的区别<br> String：</p>
-<p> String类是一个不可变的类，一旦创建就不可以修改。<br> String是final类，不能被继承<br> String实现了equals()方法和hashCode()方法<br> StringBuffer：</p>
-<p> 继承自AbstractStringBuilder，是可变类。<br> StringBuffer是线程安全的<br> 可以通过append方法动态构造数据。<br> StringBuilder：</p>
-<p> 继承自AbstractStringBuilder，是可变类。<br> StringBuilder是非线性安全的。<br> 执行效率比StringBuffer高。</p>
-</li>
-<li><p>静态代理和动态代理的区别<br> 静态代理中代理类在编译期就已经确定，而动态代理则是JVM运行时动态生成，静态代理的效 率相对动态代理来说相对高一些，但是静态代理代码冗余大，一单需要修改接口，代理类和委 托类都需要修改。</p>
-</li>
-<li><p>说说Java中多态的实现原理<br>多态机制包括静态多态（编译时多态）和动态多态（运行时多态）<br>静态多态比如说重载，动态多态一般指在运行时才能确定调用哪个方法。<br>我们通常所说的多态一般指运行时多态，也就是编译时不确定究竟调用哪个具体方法，一直等到运行时才能确定。<br>多态实现方式：子类继承父类（extends）和类实现接口（implements）<br>多态核心之处就在于对父类方法的改写或对接口方法的实现，以取得在运行时不同的执行效果。<br>Java 里对象方法的调用是依靠类信息里的方法表实现的，对象方法引用调用和接口方法引用调用的大致思想是一样的。当调用对象的某个方法时，JVM查找该对象类的方法表以确定该方法的直接引用地址，有了地址后才真正调用该方法。</p>
-</li>
-<li><p>⾯向对象三⼤特性是什么。并解释这三⼤特性。<br>封装：将对象的属性私有化，同时提供给外界⼀些访问的⽅法，就是隐藏内部事项，不需要让你知道 怎么写的，知道他的功能是啥就⾏。 继承：继承是使⽤已存在的类的定义作为基础建⽴新类的技术，新类的定义可以增加新的数据或新的 功能，也可以⽤⽗类的功能，但不能选择性地继承⽗类。通过使⽤继承我们能够⾮常⽅便地复⽤以前 的代码。 关于继承如下 3 点请记住： 1. ⼦类拥有⽗类对象所有的属性和⽅法（包括私有属性和私有⽅法），但是⽗类中的私有属性和⽅ 法⼦类是⽆法访问，只是拥有。 2. ⼦类可以拥有⾃⼰属性和⽅法，即⼦类可以对⽗类进⾏扩展。 3. ⼦类可以⽤⾃⼰的⽅式实现⽗类的⽅法。<br>多态： 所谓多态就是指程序中定义的引⽤变量所指向的具体类型和通过该引⽤变量发出的⽅法调⽤在编程时 并不确定，⽽是在程序运⾏期间才确定，即⼀个引⽤变量到底会指向哪个类的实例对象，该引⽤变量 发出的⽅法调⽤到底是哪个类中实现的⽅法，必须在由程序运⾏期间才能决定。 在 Java 中有两种形式可以实现多态：继承（多个⼦类对同⼀⽅法的重写）和接⼝（实现接⼝并覆盖 ⼀⽅法）。</p>
-</li>
-<li><p>HashMap 、 HashTable 、以及 ConcurrentHashMap 的区别<br>hashmap与hashtable<br>线程安全：Hashtable⽅法sychonized修饰，线程安全<br>效率⽅⾯：由于Hashtable⽅法被sychonized修饰，效率⽐HashMap低 底层数据结构：HashMap jdk8当链表⻓度&gt;&#x3D;8并且数组⻓度&gt;&#x3D;64链表会转红⿊树，Hashtable 没有这样机制<br>初始容量与扩容：默认初始量：Hashtable为11，HashMap为16；若指定初始量：Hashtable ⽤指定的值，HashMap会扩充为 2 的幂次⽅⼤⼩。扩容：Hashtable容量变为原来2n+1倍， HashMap变为2倍。<br>对Null key与Null value⽀持：HashMap⽀持⼀个Null key多个Null value，Hashtable不⽀持 Null key，否则报错空指针异常<br>HashTable 和 ConcurrentHashMap 区别<br>HashTable 使⽤的是 Synchronized 关键字修饰，ConcurrentHashMap 是 JDK1.7使⽤了锁分段技 术来保证线程安全的。JDK1.8ConcurrentHashMap 取消了 Segment 分段锁，采⽤ CAS 和 synchronized 来保证并发安全。数据结构跟 HashMap1.8 的结构类似，数组+链表&#x2F;红⿊⼆叉树。 synchronized只锁定当前链表或红⿊⼆叉树的⾸节点，这样只要hash 不冲突，就 不会产⽣并发，效 率⼜提升 N倍。</p>
+<li>说说建⽴索引的优势、负⾯影响和原则？<br> 索引的优势<br> 检索速度：快速访问数据表中的特定信息，提⾼检索速度。<br> 唯⼀性：创建唯⼀性索引，保证数据库表中每⼀⾏数据的唯⼀性。<br> 加速连接：加速表和表之间的连接。<br> 减少分组和排序的时间：使⽤分组和排序进⾏数据检索时，可以显著减少查询中分组和排序的时间。<br> 索引的负⾯影响<br> 耗时：创建索引和维护索引需要耗费时间，这个时间随着数据量的增加⽽增加。 占空间：索引需要占⽤物理空间，不光是表需要占⽤数据空间，每个索引也需要占⽤物理空间。 维护速度：当对表进⾏增、删、改、的时候索引也要动态维护，这样就降低了数据的维护速度。<br> 为数据表建⽴索引的原则有哪些<br> 在最频繁使⽤的、⽤以缩⼩查询范围的字段上建⽴索引。<br> 在频繁使⽤的、需要排序的字段上建⽴索引。<br> 什么情况下不适合建⽴索引<br> 对于查询中很少涉及的列或者重复值⽐较多的列，不宜建⽴索引。<br> 对于⼀些特殊的数据类型，不宜建⽴索引，⽐如⽂本字段（text）。</li>
+<li>说下执⾏计划<br> 在⽣产过程中，经常会遇到因为SQL语句导致的性能瓶颈问题，这时候就需要我们去优化SQL的执⾏ 效率；EXPLAIN语句的各个输出项指标可以帮助我们有针对性的提升查询语句的性能。<br> 执⾏计划重要指标解释(id主键，name,age 联合索引, a 普通索引，b普通列)：<br> type 字段 &#x3D;&gt;&gt; ALL - 最⽜的优化结果这⾥就不展开介绍了<br> range - 索引范围查询；<br> ref - ⼆级索引等值查询；<br> const - 主键&#x2F;唯⼀索引等值查询；<br> index_merge - 多个索引查询；<br> index - 覆盖索引且需要扫描全部的索引；<br> eq_ref - 被连接表主键&#x2F;唯⼀引等值查询；<br> possible_keys 字段 &#x3D;&gt;&gt; 可能⽤到的索引(备胎）；<br> key 字段 &#x3D;&gt;&gt; 实际⽤到的索引(转正)；<br> key_len 字段 &#x3D;&gt;&gt; 实际使⽤索引的最⼤⻓度<br> ref 字段 &#x3D;&gt;&gt; 等值查询有⼀个常数&#x2F;列值<br> const - 索引等值查询；<br> [DB].[table].[column] - 被调⽤表索引列等值查询；<br> Extra字段 &#x3D;&gt;&gt; Impossible WHERE - where false；<br> Using index - 覆盖索引；<br> Using index condition - 索引下推；<br> Using where - 顺序扫描，where条件查询。</li>
+<li>说下主从复制原理<br> 主从复制主要有以下流程： <ol>
+<li>master服务器将数据的改变记录到binlog中； </li>
+<li>slave服务器会在⼀定时间间隔内对master 的binlog进⾏检查，如果发⽣改变，则开始⼀个 I&#x2F;OThread请求读取master中binlog； </li>
+<li>同时主节点为每个I&#x2F;O线程启动⼀个dump线程，⽤于向其发送⼆进制事件，并保存⾄从节点本地的中继⽇志中，从节点将启动SQL线程从中继⽇志中读取⼆进制⽇志，在本地重放，使得其数据 和主节点的保持⼀致，最后I&#x2F;OThread和SQLThread将进⼊睡眠状态，等待下⼀次被唤醒；<br> ⼤⽩话解释：<br> 从库会⽣成两个线程,⼀个I&#x2F;O线程,⼀个SQL线程; I&#x2F;O线程会去请求主库的binlog,并将得到的binlog写到本地的relay-log(中继⽇志)⽂件中; 主库会⽣成⼀个dump线程,⽤来给从库I&#x2F;O线程传binlog; SQL线程,会读取relay log⽂件中的⽇志,并解析成sql语句逐⼀执⾏; 主从复制存在数据丢失问题的解决⽅案：在使⽤过程中需要开启半同步复制；</li>
+</ol>
 </li>
 </ol>
 
@@ -539,7 +513,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://ly0223.github.io/2022/07/07/java-ji-chu-0/">https://ly0223.github.io/2022/07/07/java-ji-chu-0/</a>
+                    <a href="https://ly0223.github.io/2022/07/07/mysql/">https://ly0223.github.io/2022/07/07/mysql/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -748,19 +722,19 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2022/07/07/mysql/">
+                <a href="/2022/07/07/mybatis/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="mysql">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="mybatis">
                         
-                        <span class="card-title">mysql</span>
+                        <span class="card-title">mybatis</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            mysql学习总结
+                            mybatis学习总结
                         
                     </div>
                     <div class="publish-info">
@@ -782,7 +756,7 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
                 <a href="/2022/07/07/java-ji-chu-0/">
@@ -812,7 +786,6 @@
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
